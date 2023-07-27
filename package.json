@@ -6,13 +6,9 @@
   "scripts": {
     "test": "jest src"
   },
-  "repository": {
-    "type": "git",
-    "url": "git+https://github.com/nextDriveIoE/ioep-pr-title-check"
-  },
   "keywords": [
     "github-action",
-    "ioe-conventional-pr-title"
+    "ioe-pr-title-check"
   ],
   "author": "han.lin <han.lin@nextdrive.io>",
   "license": "MIT",
