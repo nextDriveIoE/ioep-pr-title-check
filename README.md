@@ -1,10 +1,6 @@
-# Conventional PR Title Action
+# IOE PR Title Checker Action
 
-This is a [GitHub Action](https://github.com/features/actions) that ensures your PR title matches the [Conventional Commits spec](https://www.conventionalcommits.org/).
-
-This is helpful when you're using [semantic-release](https://github.com/semantic-release/semantic-release) with the Conventional Commits preset. When using the `Squash and merge` strategy, GitHub will suggest to use the PR title as the commit message. With this action you can validate that the PR title will lead to a correct commit message.
-
-See [Conventional Commits](https://www.conventionalcommits.org/) for sample titles.
+This is a [GitHub Action](https://github.com/features/actions) that ensures your PR title matches the IOEP's PR title spec.
 
 ## Inputs
 
@@ -20,13 +16,8 @@ See [Conventional Commits](https://www.conventionalcommits.org/) for sample titl
 
 ### `context-name`
 
-**Optional.** Persistent status check context key. 
-> Default: `"conventional-pr-title"`.
-
-### `preset`
-
-**Optional.** Conventional changelog preset.
-> Default: `"conventional-changelog-conventionalcommits@5.0.0"`.
+**Optional.** Persistent status check context key.
+> Default: `"ioe-pr-title-check"`.
 
 ### `target-url`
 
@@ -62,7 +53,7 @@ jobs:
     permissions:
       statuses: write
     steps:
-      - uses: aslafy-z/conventional-pr-title-action@v3
+      - uses: nextDriveIoE/ioep-pr-title-check@v0.0.1
         env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
 ```
