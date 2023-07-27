@@ -1,6 +1,6 @@
 {
   "name": "ioep-pr-title-check",
-  "version": "0.1.0",
+  "version": "0.0.1",
   "description": "Ensure your PR title matches the IOEP PR spec.",
   "main": "src/index.js",
   "scripts": {
