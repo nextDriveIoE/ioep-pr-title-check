@@ -1,0 +1,29 @@
+{
+  "name": "ioep-pr-title-check",
+  "version": "0.1.0",
+  "description": "Ensure your PR title matches the IOEP PR spec.",
+  "main": "src/index.js",
+  "scripts": {
+    "test": "jest src"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/nextDriveIoE/ioep-pr-title-check"
+  },
+  "keywords": [
+    "github-action",
+    "ioe-conventional-pr-title"
+  ],
+  "author": "han.lin <han.lin@nextdrive.io>",
+  "license": "MIT",
+  "dependencies": {
+    "@actions/core": "1.10.0",
+    "@actions/github": "5.1.1"
+  },
+  "devDependencies": {
+    "jest": "29.5.0"
+  },
+  "engines": {
+    "node": ">= 18.16.0"
+  }
+}

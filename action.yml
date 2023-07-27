@@ -1,0 +1,26 @@
+name: IOE PR Title
+author: han.lin <han.lin@nextdrive.io>
+description: Ensure your PR title with Production version(ioe convention)
+inputs:
+  success-state:
+    description: Description of the status check if validation succeeds.
+    required: false
+    default: Title follows the specification.
+  failure-state:
+    description: Description of the status check if validation fails.
+    required: false
+    default: Title does not follow the specification.
+  context-name:
+    description: Persistent status check context key
+    required: false
+    default: ioe-conventional-pr-title
+  target-url:
+    description: URL to be used when linking the "Details" in the actions overview.
+    required: false
+    default: https://nextdrive.atlassian.net/wiki/spaces/~176602223/pages/1229554245/IOEP+Enhancement+of+Pull+Reuqest+Github+title
+runs:
+  using: docker
+  image: Dockerfile
+branding:
+  icon: shield
+  color: green
