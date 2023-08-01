@@ -1,4 +1,4 @@
-const validateTitle = require('./validateTitle');
+const { AUTO_PR_TITLE, validateTitle } = require('./validateTitle');
 
 it('detects valid PR titles(with versions)', async () => {
   const inputs = [
@@ -12,7 +12,7 @@ it('detects valid PR titles(with versions)', async () => {
     "fix: [R23.7B-hotfix] xxx"
   ];
 
-  await Promise.all(inputs.map(element => validateTitle(element)));
+  await expect(Promise.all(inputs.map(element => validateTitle(element)))).resolves.toEqual(inputs.map(() => undefined));
 });
 
 it('throws for PR titles with a wrong version', async () => {
@@ -21,4 +21,8 @@ it('throws for PR titles with a wrong version', async () => {
 
 it('throws for PR titles with an unknown version', async () => {
   await expect(validateTitle("[R23.7B-fix]")).rejects.toThrow(Error);
+});
+
+it('skips due to AUTO PR', async () => {
+  await expect(validateTitle(AUTO_PR_TITLE)).resolves.toBeUndefined();
 });
