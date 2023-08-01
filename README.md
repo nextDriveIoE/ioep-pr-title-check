@@ -22,7 +22,7 @@ This is a [GitHub Action](https://github.com/features/actions) that ensures your
 ### `target-url`
 
 **Optional.** URL to be used when linking the "Details" in the actions overview.
-> Default: `"https://www.conventionalcommits.org/en/v1.0.0/#summary"`.
+> Default: `"https://nextdrive.atlassian.net/wiki/spaces/~176602223/pages/1229554245/IOEP+Enhancement+of+Pull+Reuqest+Github+title"`.
 
 ## Outputs
 

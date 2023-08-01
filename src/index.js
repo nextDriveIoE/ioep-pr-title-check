@@ -1,7 +1,7 @@
 const core = require('@actions/core');
 const github = require('@actions/github');
 
-const validateTitle = require('./validateTitle');
+const { validateTitle } = require('./validateTitle');
 
 async function run() {
   try {
@@ -54,7 +54,7 @@ async function run() {
     if (error) {
       throw error;
     } else {
-      console.log(`${state}: ${description}`);
+      console.log(`${state}: ${description}`, error);
     }
 
   } catch (error) {
